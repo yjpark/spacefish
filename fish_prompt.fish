@@ -26,6 +26,10 @@ function fish_prompt
 		echo
 	end
 
+	if test "$SPACEFISH_PROMPT_SEPERATOR_SHOW" = "true"
+		eval __sf_seperator
+	end
+
 	for i in $SPACEFISH_PROMPT_ORDER
 		eval __sf_section_$i
 	end
